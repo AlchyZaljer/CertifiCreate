@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+body {
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+}
+
+#container-fluid {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14pt !important;
+  background-color: var(--gray-200);
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#panel-left {
+  width: 30%;
+}
+
+.tooltip-inner {
+  max-width: 160px;
+  text-align: left;
+}
+
+#text-toolbar input,
+#text-toolbar input:focus,
+#text-toolbar input:active,
+#text-toolbar select {
+  border-width: thin;
+  outline: none;
+}
+
+#text-toolbar input[type="number"]::-webkit-inner-spin-button,
+#text-toolbar input[type="number"]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+#text-edit-btns label {
+  height: fit-content;
+}
+
+#text-edit-btns img,
+#text-color::-webkit-color-swatch-wrapper {
+  width: 30px;
+  height: 30px;
+}
+
+#text-edit-btns input:checked + label {
+  background-color: var(--gray-600);
+}
+
+.text-toolbar-item {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.text-toolbar-item.selectable {
+  pointer-events: unset;
+  opacity: 1;
+}
+
+#panel-center {
+  width: 58%;
+}
+
+.dropzone {
+  width: 60%;
+  cursor: pointer;
+  border: 3px dashed var(--gray-500);
+  background-color: var(--gray-400);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.cross {
+  width: 4px;
+  height: 40px;
+  position: relative;
+}
+
+.cross:before,
+.cross:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  background-color: var(--gray-500);
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s ease;
+}
+
+.cross:before {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.dropzone:hover,
+.dropzone.dragover {
+  border-color: var(--gray-600);
+  background-color: var(--gray-300);
+}
+
+.dropzone:hover .cross:before,
+.dropzone:hover .cross:after,
+.dropzone.dragover .cross:before,
+.dropzone.dragover .cross:after {
+  background-color: var(--gray-600);
+}
+
+.axis {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.text-block {
+  position: absolute;
+  cursor: move;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+  hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+
+
+#panel-right {
+  width: 12%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.editable {
+  outline: none;
+  box-shadow: none;
+  vertical-align: top;
+}
+
+#text-block-editable-content {
+  resize: none;
+  overflow: hidden;
+}
+
+.border-dashed {
+  border-style: dashed !important;
+}
