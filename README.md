@@ -6,7 +6,7 @@
 
 **CertifiCreate** — это визуальный редактор, упрощающий процесс создания шаблонов для автоматической генерации сертификатов для платформы [Conflab](https://conflab.ru/).
 
-![Подготовка шаблона в certifi-create](./CertifiCreate.png "CertifiCreate")
+![Подготовка шаблона в CertifiCreate](./CertifiCreate.png "CertifiCreate")
 
 ## **Функциональность**
 
